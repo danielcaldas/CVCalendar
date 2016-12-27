@@ -25,7 +25,7 @@ public final class CVAuxiliaryView: UIView {
     public let defaultFillColor = UIColor.colorFromCode(0xe74c3c)
 
     fileprivate var radius: CGFloat {
-        return (min(frame.height, frame.width) - 10) / 2
+        return (min(frame.height, frame.width) - 0.5) / 2
     }
 
     public unowned let dayView: DayView

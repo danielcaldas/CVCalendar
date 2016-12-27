@@ -18,7 +18,7 @@ public final class CVCalendarMenuView: UIView {
     public var dayOfWeekTextColor: UIColor? = .darkGray
     public var dayofWeekBackgroundColor: UIColor? = .clear
     public var dayOfWeekTextUppercase: Bool? = true
-    public var dayOfWeekFont: UIFont? = UIFont(name: "Avenir", size: 10)
+    public var dayOfWeekFont: UIFont? = UIFont(name: "Avenir", size: 14)
     public var weekdaySymbolType: WeekdaySymbolType? = .short
 
     @IBOutlet public weak var menuViewDelegate: AnyObject? {
@@ -116,7 +116,7 @@ public final class CVCalendarMenuView: UIView {
             if dayOfWeekTextUppercase! {
                 symbol.text = (self.symbols[i]).uppercased()
             }
-            
+
             let weekDay = Weekday(rawValue: (firstWeekday!.rawValue + i) % 7) ?? .saturday
             symbol.font = dayOfWeekFont
             symbol.textColor = self.delegate?.dayOfWeekTextColor?(by: weekDay)
